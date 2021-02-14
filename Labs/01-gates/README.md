@@ -13,6 +13,12 @@ Using De Morgan's laws I modified the following logic function to the form with 
 My VHDL code from `design.vhd`:
 
 ```vhdl
+------------------------------------------------------------------------
+--
+-- Verification of De Morgan's laws.
+--
+------------------------------------------------------------------------
+
 library ieee;                -- Standard library
 use ieee.std_logic_1164.all; -- Package for data types and logic operations
 
@@ -73,6 +79,12 @@ In EDA Playground, I verified Distributive laws:
 My VHDL code from `design.vhd`:
 
 ```vhdl
+------------------------------------------------------------------------
+--
+-- Verification of Distributive laws.
+--
+------------------------------------------------------------------------
+
 library ieee;                -- Standard library
 use ieee.std_logic_1164.all; -- Package for data types and logic operations
 
@@ -88,7 +100,7 @@ entity gates is
         f_o1       : out std_logic;    	-- 1st output function
         f_o2   	   : out std_logic;    	-- 2nd output function
         f_distr_o1 : out std_logic;    	-- 1st Distributive law output function
-        f_distr_o2 : out std_logic		-- 2nd Distributive law output function
+        f_distr_o2 : out std_logic      -- 2nd Distributive law output function
     );
     
 end entity gates;
