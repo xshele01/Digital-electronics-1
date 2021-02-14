@@ -8,7 +8,7 @@ My public EDA Playground example can be found [here](https://www.edaplayground.c
 
 Using De Morgan's laws I modified the following logic function to the form with NAND and NOR gates only:
 
-<center> ![De Morgan's laws](Images/equations.png) </center>
+![De Morgan's laws](Images/equations.png) 
 
 My VHDL code from `design.vhd`:
 
@@ -47,11 +47,9 @@ end architecture dataflow;
 
 Screenshot with simulated time waveforms:
 
-<center> ![Screenshot with simulated time waveforms](Images/screenshot_de_morgans_laws.png) </center>
+![Screenshot with simulated time waveforms](Images/screenshot_de_morgans_laws.png) 
 
 You can see the results in the folowing table:
-
-<center>
 
 | **c** | **b** |**a** | **f(c,b,a)** |
 | :-: | :-: | :-: | :-: |
@@ -64,15 +62,13 @@ You can see the results in the folowing table:
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 0 |
 
-</center>
-
 ## 2. Verification of Distributive laws
 
 My public EDA Playground example can be found [here](https://www.edaplayground.com/x/AKjK).
 
 In EDA Playground, I verified Distributive laws:
 
-<center> ![Distributive laws](Images/distributives.png) </center>
+![Distributive laws](Images/distributives.png)
 
 My VHDL code from `design.vhd`:
 
@@ -113,4 +109,4 @@ end architecture dataflow;
 
 Screenshot with simulated time waveforms:
 
-<center> ![Screenshot with simulated time waveforms](Images/screenshot_distributive_laws.png) </center>
+![Screenshot with simulated time waveforms](Images/screenshot_distributive_laws.png)
