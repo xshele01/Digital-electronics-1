@@ -1,16 +1,14 @@
 # Lab 1 assignment
 
-## 1. Submit the GitHub link to your `Digital-electronics-1` repository.
-
 You can find my DE-1 repository [here](https://github.com/xshele01/Digital-electronics-1).
 
-## 2. Verification of De Morgan's laws of function f(c,b,a).
+## 1. Verification of De Morgan's laws of function f(c,b,a)
 
 My public EDA Playground example can be found [here](https://www.edaplayground.com/x/Z5Sb).
 
 Using De Morgan's laws I modified the following logic function to the form with NAND and NOR gates only:
 
-![De Morgan's laws](Images/equations.png)
+<center> ![De Morgan's laws](Images/equations.png) </center>
 
 My VHDL code from `design.vhd`:
 
@@ -24,12 +22,12 @@ use ieee.std_logic_1164.all; -- Package for data types and logic operations
 entity gates is
 
     port(
-        a_i     : in  std_logic;         -- Data input
-        b_i     : in  std_logic;         -- Data input
-        c_i     : in  std_logic;         -- Data input
-        f_o		: out std_logic;        -- output function
-        fnand_o : out std_logic;    	-- NAND output function
-        fnor_o  : out std_logic			-- NOR output function
+        a_i     : in  std_logic;        -- Data input
+        b_i     : in  std_logic;        -- Data input
+        c_i     : in  std_logic;        -- Data input
+        f_o     : out std_logic;        -- output function
+        fnand_o : out std_logic;        -- NAND output function
+        fnor_o  : out std_logic         -- NOR output function
     );
     
 end entity gates;
@@ -48,9 +46,12 @@ end architecture dataflow;
 ```
 
 Screenshot with simulated time waveforms:
-![Screenshot with simulated time waveforms](Images/screenshot_de_morgans_laws.png)
+
+<center> ![Screenshot with simulated time waveforms](Images/screenshot_de_morgans_laws.png) </center>
 
 You can see the results in the folowing table:
+
+<center>
 
 | **c** | **b** |**a** | **f(c,b,a)** |
 | :-: | :-: | :-: | :-: |
@@ -63,13 +64,15 @@ You can see the results in the folowing table:
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 0 |
 
-## 3. Verification of Distributive laws.
+</center>
+
+## 2. Verification of Distributive laws
 
 My public EDA Playground example can be found [here](https://www.edaplayground.com/x/AKjK).
 
 In EDA Playground, I verified Distributive laws:
 
-![Distributive laws](Images/distributives.png)
+<center> ![Distributive laws](Images/distributives.png) </center>
 
 My VHDL code from `design.vhd`:
 
@@ -109,4 +112,5 @@ end architecture dataflow;
 ```
 
 Screenshot with simulated time waveforms:
-![Screenshot with simulated time waveforms](Images/screenshot_distributive_laws.png)
+
+<center> ![Screenshot with simulated time waveforms](Images/screenshot_distributive_laws.png) </center>
