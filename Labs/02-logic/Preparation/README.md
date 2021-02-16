@@ -43,9 +43,9 @@ A **Maxterm** is a sum (OR) term containing all input variables of the function 
 
 The function *B < A* has a value of 0 in rows 0, 4, 5, 8, 9, 10, 12, 13, 14, 15. The product of Maxterms form (canonical PoS) for function A > B is as follows:
 
-![Sum of the Products for "equals" function](Images/less_then_PoS_1.png) 
-
-A more transparent notation contains only the Maxterms and their logical product:
-
 ![Sum of the Products for "equals" function](Images/less_then_PoS_2.png) 
+
+Or using Maxterms and their logical product:
+
+![Sum of the Products for "equals" function](Images/less_then_PoS_1.png) 
 
