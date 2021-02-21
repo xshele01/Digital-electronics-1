@@ -37,15 +37,15 @@ The function *B < A* has a value of 0 in rows 0, 4, 5, 8, 9, 10, 12, 13, 14, 15.
 
 The K-map for the "equals" function is as follows:
 
-!["Equals" function K-map](Images/equals_K_map.png)
+<img src="Images/equals_K_map.png" alt="Equals function K-map" width="400"/>
 
 The K-map for the "less than" function is as follows:
 
-!["Less than" function K-map](Images/less_then_K_map.png)
+<img src="Images/less_then_K_map.png" alt="Less than function K-map" width="400"/>
 
 The K-map for the "greater than" function is as follows:
 
-!["Greater than" function K-map](Images/greater_then_K_map.png)
+<img src="Images/greater_then_K_map.png" alt="Greater than function K-map" width="400"/>
 
 K-maps offer a graphical method of simplification of SoP form of the "greater than" function and PoS form of the "less than" function:
 
