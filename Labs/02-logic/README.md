@@ -1,4 +1,4 @@
-# Lab 2 Preparation
+# Lab 2 assignment
 
 ## 1. Truth table
 
