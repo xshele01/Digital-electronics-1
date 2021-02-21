@@ -2,7 +2,7 @@
 
 ## 1. Truth table
 
-Truth table for 2-bit *Identity comparator* (B equals A), and two *Magnitude comparators* (B greater then A and B less then A):
+Truth table for 2-bit *Identity comparator* (B equals A), and two *Magnitude comparators* (B greater than A and B less than A):
 
 | **Decimal equivalent** | **B[1:0]** | **A[1:0]** | **B > A** | **B = A** | **B < A** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -29,9 +29,9 @@ The function *B = A* has a value of 1 in rows 0, 5, 10, 15. The sum of minterms 
 
 The function *B < A* has a value of 0 in rows 0, 4, 5, 8, 9, 10, 12, 13, 14, 15. The product of Maxterms form (canonical PoS) for function *B < A* is as follows:
 
-![Sum of the Products for "equals" function](Images/less_then_canon_PoS_1.svg) 
+![Sum of the Products for "equals" function](Images/less_canon_PoS_1.svg) 
 
-![Sum of the Products for "equals" function](Images/less_then_canon_PoS_2.svg) 
+![Sum of the Products for "equals" function](Images/less_canon_PoS_2.svg) 
 
 ## 2. 2-bit comparator
 
@@ -41,11 +41,11 @@ The K-map for the "equals" function is as follows:
 
 The K-map for the "less than" function is as follows:
 
-<img src="Images/less_then_K_map.png" alt="Less than function K-map" width="400"/>
+<img src="Images/less_K_map.png" alt="Less than function K-map" width="400"/>
 
 The K-map for the "greater than" function is as follows:
 
-<img src="Images/greater_then_K_map.png" alt="Greater than function K-map" width="400"/>
+<img src="Images/greater_K_map.png" alt="Greater than function K-map" width="400"/>
 
 K-maps offer a graphical method of simplification of SoP form of the "greater than" function and PoS form of the "less than" function:
 
