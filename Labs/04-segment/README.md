@@ -178,7 +178,7 @@ Listing of VHDL stimulus process from testbench file ```tb_hex_7seg.vhd```:
 
 Screenshot with simulated time waveforms:
 
-![Simulated time waveforms](Images/graph-behavioral.png)
+![Simulated time waveforms](Images/graph-hex_7seg.png)
 
 Listing of VHDL code from source file ```top.vhd``` with 7-segment module instantiation:
 
