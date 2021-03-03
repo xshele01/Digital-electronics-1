@@ -16,3 +16,4 @@ Welcome to my DE-1 repository!
   * [Nexys A7 Reference Manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual)
   *  [FPGARelated VHDL tutorial](https://www.fpgarelated.com/showarticle/208/vhdl-tutorial.php)
   * [Learn about Electronics](https://learnabout-electronics.org/index.php)
+  * [Last Minute Engineers](https://lastminuteengineers.com/)

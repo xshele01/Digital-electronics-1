@@ -1,4 +1,4 @@
-# Lab 2 assignment
+# Lab 2: Combinational logic
 
 ## 1. Truth table
 

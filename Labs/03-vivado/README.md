@@ -1,8 +1,8 @@
-# Lab 3 assignment
+# Lab 3: Introduction to Vivado
 
 ## 1. Preparation tasks
 
-[Reference manual on LEDs](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#basic_io)
+<a href="https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#basic_io" target="_blank">Reference manual on LEDs</a>
 
 The *Nexys A7* board provides sixteen switches and LEDs. The switches can be used to provide inputs, and the LEDs can be used as output devices.
 

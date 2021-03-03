@@ -1,4 +1,4 @@
-# Lab 1 assignment
+# Lab 1: Introduction to Git and VHDL
 
 You can find my DE-1 repository [here](https://github.com/xshele01/Digital-electronics-1).
 
