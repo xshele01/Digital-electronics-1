@@ -1,6 +1,9 @@
 # Lab 3 assignment
 
 ## 1. Preparation tasks
+
+[Reference manual on LEDs](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#basic_io)
+
 The *Nexys A7* board provides sixteen switches and LEDs. The switches can be used to provide inputs, and the LEDs can be used as output devices.
 
 The sixteen individual high-efficiency LEDs are anode-connected to the FPGA via 330-ohm resistors, so they will turn on when a logic *high voltage* is applied to their respective I/O pin. Connection table:
@@ -138,7 +141,7 @@ Name your project and choose where to save it. For *Digital electronics 1* cours
 
 ![Simulated time waveforms](Images/t4.png)
 
-On *"Add Sources"* page, choose *“Create File”*. A *“Create Source File”* window will pop up where you can choose file type (VHDL) and the name of the file. Don't forget to set targer laguage and simulator language to VHDL before pressing that juicy *"Next"* button! 
+On *"Add Sources"* page, choose *“Create File”*. A *“Create Source File”* window will pop up where you can choose file type (VHDL) and the name of the file. Don't forget to set targer language and simulator language to VHDL before pressing that juicy *"Next"* button! 
 
 ![Simulated time waveforms](Images/t5.png)
 
