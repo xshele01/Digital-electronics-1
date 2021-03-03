@@ -2,7 +2,7 @@
 
 ## 1. Preparation task
 
-<a href="https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#seven-segment_display" target="_blank">Reference manual on Seven-Segment Display</a>
+[Reference manual on Seven-Segment Display](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#seven-segment_display)
 
 The Nexys A7 board contains two four-digit common anode seven-segment LED displays, configured to behave like a single eight-digit display. Each of the eight digits is composed of seven segments arranged in a “figure 8” pattern, with an LED embedded in each segment:
 
@@ -13,6 +13,10 @@ The anodes of the seven LEDs forming each digit are tied together into one “co
 ![Seven-Segment Display](Images/n4t.png)
 
 The common anode signals are available as eight “digit enable” input signals to the 8-digit display. The cathodes of similar segments on all four displays are connected into seven circuit nodes labeled CA through CG:
+
+<table>
+<tr>
+<td>
 
 | **Cathode** | **FPGA pin** |
 | :-: | :-: |
@@ -25,7 +29,8 @@ The common anode signals are available as eight “digit enable” input signals
 | CG | L18 |
 | DP | H15 |
 
-These seven cathode signals are available as inputs to the 8-digit display. This signal connection scheme creates a multiplexed display, where the cathode signals are common to all digits but they can only illuminate the segments of the digit whose corresponding anode signal is asserted. 
+</td>
+<td>
 
 | **Anode** | **FPGA pin** |
 | :-: | :-: |
@@ -37,6 +42,14 @@ These seven cathode signals are available as inputs to the 8-digit display. This
 | AN2 | T9 |
 | AN1 | J18 |
 | AN0 | J17 |
+
+</td>
+</tr> 
+</table>
+
+These seven cathode signals are available as inputs to the 8-digit display. This signal connection scheme creates a multiplexed display, where the cathode signals are common to all digits but they can only illuminate the segments of the digit whose corresponding anode signal is asserted. 
+
+
 
 Both the AN0..7 and the CA..G/DP signals are driven low when active. 
 
@@ -66,8 +79,18 @@ Decoder conversion table for common anode 7-segment display:
 Listing of VHDL architecture from source file ```hex_7seg.vhd```:
 
 ```vhdl
-p_7seg_decoder : process(hex_i)
+begin
+
+    --------------------------------------------------------------------
+    -- p_7seg_decoder:
+    -- A combinational process for 7-segment display decoder. 
+    -- Any time "hex_i" is changed, the process is "executed".
+    -- Output pin seg_o(6) corresponds to segment A, seg_o(5) to B, etc.
+    --------------------------------------------------------------------
+    p_7seg_decoder : process(hex_i)
+    
     begin
+    
         case hex_i is
             when "0000" =>
                 seg_o <= "0000001";     -- 0
@@ -102,6 +125,7 @@ p_7seg_decoder : process(hex_i)
             when others =>
                 seg_o <= "0111000";     -- F
         end case;
+        
     end process p_7seg_decoder;
 ```
 
@@ -159,9 +183,13 @@ Screenshot with simulated time waveforms:
 Listing of VHDL code from source file ```top.vhd``` with 7-segment module instantiation:
 
 ```vhdl
- hex2seg : entity work.hex_7seg
+    --------------------------------------------------------------------
+    -- Instance (copy) of hex_7seg entity
+    --------------------------------------------------------------------
+    hex2seg : entity work.hex_7seg
         port map(
             hex_i    => SW,
+            
             seg_o(6) => CA,
             seg_o(5) => CB,
             seg_o(4) => CC,
@@ -195,8 +223,38 @@ Truth table for LEDs:
 | E | 1110 | 0 | 1 | 0 | 0 |
 | F | 1111 | 0 | 1 | 1 | 0 |
 
-Listing of VHDL code for LEDs(7:4) with syntax highlighting:
+Listing of VHDL code for LEDs(7:4):
 
 ```vhdl
+-- Turn LED(4) on if input value is equal to 0, ie "0000"
+LED(4) <= '1' when SW = "0000" else '0';
 
+-- Turn LED(5) on if input value is greater than 9
+LED(5) <= '1' when SW > "1001" else '0';
+
+-- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
+LED(6) <=   '1' when SW = "0001" else
+            '1' when SW = "0011" else 
+            '1' when SW = "0101" else 
+            '1' when SW = "0111" else 
+            '1' when SW = "1001" else 
+            '1' when SW = "1011" else 
+            '1' when SW = "1101" else  
+            '1' when SW = "1111" else 
+            '0';
+
+-- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
+LED(7) <=   '1' when SW = "0001" else
+            '1' when SW = "0010" else 
+            '1' when SW = "0100" else 
+            '1' when SW = "1000" else 
+            '0';
 ```
+
+Screenshot with simulated time waveforms (all inputs and outputs of ```top.vhd```):
+
+![Simulated time waveforms](Images/graph-top.png)
+
+Screenshot with simulated time waveforms (only LEDs):
+
+![Simulated time waveforms](Images/graph-leds.png)

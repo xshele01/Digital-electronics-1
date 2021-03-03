@@ -66,9 +66,6 @@ https://www.edaplayground.com/x/9BDE
 Listing of VHDL architecture from design file `design.vhd`:
 
 ```vhdl
-------------------------------------------------------------------------
--- Architecture body for 4-bit binary comparator
-------------------------------------------------------------------------
 architecture Behavioral of comparator_4bit is
 begin
     B_greater_A_o 	<= '1' when (b_i > a_i) else '0';
@@ -81,9 +78,6 @@ end architecture Behavioral;
 Listing of VHDL stimulus process from testbench file `testbench.vhd`:
 
 ```vhdl
---------------------------------------------------------------------
--- Data generation process
---------------------------------------------------------------------
 p_stimulus : process
 begin
     -- Report a note at the begining of stimulus process

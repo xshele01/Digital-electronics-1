@@ -2,7 +2,7 @@
 
 ## 1. Preparation tasks
 
-<a href="https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#basic_io" target="_blank">Reference manual on LEDs</a>
+[Reference manual on LEDs](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual#basic_io)
 
 The *Nexys A7* board provides sixteen switches and LEDs. The switches can be used to provide inputs, and the LEDs can be used as output devices.
 
@@ -62,11 +62,7 @@ A *multiplexer* (MUX) is a device that has multiple inputs and a single line out
 VHDL architecture from source file ```mux_2bit_4to1.vhd```:
 
 ```vhdl
-------------------------------------------------------------------------
--- Architecture body for mux_2bit_4to1
-------------------------------------------------------------------------
 architecture behavioral of mux_2bit_4to1 is
-
 begin
     f_o <=  a_i when (sel_i = "00") else 
             b_i when (sel_i = "01") else 
@@ -79,46 +75,43 @@ end architecture behavioral;
 VHDL stimulus process from testbench file ```tb_mux_2bit_4to1.vhd```:
 
 ```vhdl
---------------------------------------------------------------------
-    -- Data generation process
-    --------------------------------------------------------------------
-    p_stimulus : process
-    begin
-        -- Report a note at the begining of stimulus process
-        report "Stimulus process started" severity note;
-        
-        -- 1st test
-        s_a <= "00"; s_b <= "01"; s_c <= "10"; s_d <= "11"; 
-        s_sel <= "00"; wait for 62.5 ns;
-        s_sel <= "01"; wait for 62.5 ns;
-        s_sel <= "10"; wait for 62.5 ns;
-        s_sel <= "11"; wait for 62.5 ns;
+p_stimulus : process
+begin
+    -- Report a note at the begining of stimulus process
+    report "Stimulus process started" severity note;
+    
+    -- 1st test
+    s_a <= "00"; s_b <= "01"; s_c <= "10"; s_d <= "11"; 
+    s_sel <= "00"; wait for 62.5 ns;
+    s_sel <= "01"; wait for 62.5 ns;
+    s_sel <= "10"; wait for 62.5 ns;
+    s_sel <= "11"; wait for 62.5 ns;
 
-        -- 2nd test
-        s_a <= "01"; s_b <= "10"; s_c <= "11"; s_d <= "00"; 
-        s_sel <= "00"; wait for 62.5 ns;
-        s_sel <= "01"; wait for 62.5 ns;
-        s_sel <= "10"; wait for 62.5 ns;
-        s_sel <= "11"; wait for 62.5 ns;
+    -- 2nd test
+    s_a <= "01"; s_b <= "10"; s_c <= "11"; s_d <= "00"; 
+    s_sel <= "00"; wait for 62.5 ns;
+    s_sel <= "01"; wait for 62.5 ns;
+    s_sel <= "10"; wait for 62.5 ns;
+    s_sel <= "11"; wait for 62.5 ns;
+    
+    -- 3rd test
+    s_a <= "10"; s_b <= "11"; s_c <= "00"; s_d <= "01"; 
+    s_sel <= "00"; wait for 62.5 ns;
+    s_sel <= "01"; wait for 62.5 ns;
+    s_sel <= "10"; wait for 62.5 ns;
+    s_sel <= "11"; wait for 62.5 ns;
+    
+    -- 4th test
+    s_a <= "11"; s_b <= "00"; s_c <= "01"; s_d <= "10"; 
+    s_sel <= "00"; wait for 62.5 ns;
+    s_sel <= "01"; wait for 62.5 ns;
+    s_sel <= "10"; wait for 62.5 ns;
+    s_sel <= "11"; wait for 62.5 ns;
         
-        -- 3rd test
-        s_a <= "10"; s_b <= "11"; s_c <= "00"; s_d <= "01"; 
-        s_sel <= "00"; wait for 62.5 ns;
-        s_sel <= "01"; wait for 62.5 ns;
-        s_sel <= "10"; wait for 62.5 ns;
-        s_sel <= "11"; wait for 62.5 ns;
-        
-        -- 4th test
-        s_a <= "11"; s_b <= "00"; s_c <= "01"; s_d <= "10"; 
-        s_sel <= "00"; wait for 62.5 ns;
-        s_sel <= "01"; wait for 62.5 ns;
-        s_sel <= "10"; wait for 62.5 ns;
-        s_sel <= "11"; wait for 62.5 ns;
-            
-        -- Report a note at the end of stimulus process
-        report "Stimulus process finished" severity note;
-        wait;
-    end process p_stimulus;
+    -- Report a note at the end of stimulus process
+    report "Stimulus process finished" severity note;
+    wait;
+end process p_stimulus;
 ```
 
 Screenshot with simulated time waveforms:
