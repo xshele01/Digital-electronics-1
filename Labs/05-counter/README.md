@@ -3,8 +3,10 @@
 ## 1. Preparation task
 
 The pushbuttons are connected to the FPGA via series resistors to prevent damage from inadvertent short circuits. 
-The five pushbuttons arranged in a plus-sign configuration are “momentary” switches that normally generate a *low output when at rest*, and a *high output when pressed*. 
-The <font color="red">red pushbutton</font> labeled ```CPU RESET```, on the other hand, generates a *high output when at rest* and a *low output when pressed*. The *CPU RESET* button is intended to be used in EDK designs to reset the processor, but you can also use it as a general purpose pushbutton.
+
+The five pushbuttons arranged in a plus-sign configuration are “momentary” switches that normally generate a *low output when at rest*, and a *high output when pressed*.
+
+The red pushbutton labeled ```CPU RESET```, on the other hand, generates a *high output when at rest* and a *low output when pressed*. The *CPU RESET* button is intended to be used in EDK designs to reset the processor, but you can also use it as a general purpose pushbutton.
 
 Connection table:
 | **Button** | **FPGA pin** |
@@ -14,7 +16,7 @@ Connection table:
 | BTNU | M18 |
 | BTND | P18 |
 | BTNC | N17 |
-| <font color="red">BTNRES</font> | C12 |
+| BTNRES| C12 |
 
 Table with the number of periods of clock signal with frequency of 100 MHz in the span of 2 ms, 4 ms, 10 ms, 250 ms, 500 ms, and 1 s.
 | **Time interval** | **Number of clk periods** | **Number of clk periods in hex** | **Number of clk periods in binary** |
