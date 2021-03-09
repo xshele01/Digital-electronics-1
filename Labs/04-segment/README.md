@@ -255,6 +255,6 @@ Screenshot with simulated time waveforms (all inputs and outputs of ```top.vhd``
 
 ![Simulated time waveforms](Images/graph-top.png)
 
-Screenshot with simulated time waveforms (only LEDs):
+Screenshot with simulated time waveforms (inputs and LED outputs only):
 
 ![Simulated time waveforms](Images/graph-leds.png)
