@@ -107,7 +107,7 @@ Screenshot with simulated time waveforms:
 
 ![Screenshot with simulated time waveforms](Images/graph.png)
 
-Screenshot with simulated time waveforms zoomed in on a point of direction change:
+Screenshot with simulated time waveforms zoomed in at the point of direction change:
 
 ![Screenshot with zoomed in simulated time waveforms](Images/graph_zoom.png)
 
@@ -166,7 +166,7 @@ hex2seg : entity work.hex_7seg
 AN <= b"1111_1110";
 ```
 
-Sketch of the top layer including both counters (4-bit bidirectional counter 4 and a 16-bit counter):
+Sketch of the top layer including both 4- and 16-bit bidirectional counters:
 
 ![Sketch of the top layer](Images/top.png)
 
