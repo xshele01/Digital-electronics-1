@@ -7,6 +7,7 @@ Welcome to my DE-1 repository!
   3. [Introduction to Vivado](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/03-vivado)
   4. [Seven-segment display decoder](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/04-segment)
   5. [Binary counter](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/05-counter)
+  6. [Driver for multiple seven-segment displays](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/06-display_driver)
 ## Useful links
   * [Digital Electronics 1 course](https://github.com/tomas-fryza/Digital-electronics-1)
   * [Digital Electronics 1 wiki](https://github.com/tomas-fryza/Digital-electronics-1/wiki)
