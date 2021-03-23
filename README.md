@@ -17,4 +17,5 @@ Welcome to my DE-1 repository!
   * [FPGA designs with VHDL](https://vhdlguide.readthedocs.io/en/latest/index.html)
   * [VHDL Syntax Web-Course – Surf-VHDL](https://surf-vhdl.com/vhdl-syntax-web-course-surf-vhdl/)
   * [Learn about Electronics](https://learnabout-electronics.org/index.php)
+  * [VLSI Design - VHDL](https://www.tutorialspoint.com/vlsi_design/vlsi_design_vhdl_introduction.htm)
   * [WaveDrom - Online Timing Diagrams](https://wavedrom.com/)
