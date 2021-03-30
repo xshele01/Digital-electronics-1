@@ -2,8 +2,8 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Mar  3 17:09:00 2021
-# Process ID: 8660
+# Start of session at: Tue Mar 30 20:58:32 2021
+# Process ID: 6416
 # Current directory: C:/Users/pavloshelemba/display/display.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/pavloshelemba/display/display.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/pavloshelemba/display/display.sim/sim_1/behav/xsim/webtalk.log

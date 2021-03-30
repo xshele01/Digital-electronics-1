@@ -1,7 +1,10 @@
 ----------------------------------------------------------------------------------
 -- 
 -- Example of seven-segment display decoder using combinational process
--- Vivado 2020.2
+-- Nexys A7-50T, Vivado 2020.2
+--
+-- Copyright (c) 2021-Present Pavlo Shelemba
+-- This work is licensed under the terms of the MIT license.
 -- 
 ----------------------------------------------------------------------------------
 

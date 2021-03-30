@@ -1,0 +1,7 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b80725ddc27243df826ce9422adf83eb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3311] expression has 3 elements ; formal 'led' expects 4 [C:/Users/pavloshelemba/flip_flops/flip_flops.srcs/sim_1/new/tb_top.vhd:36]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_top in library work failed.

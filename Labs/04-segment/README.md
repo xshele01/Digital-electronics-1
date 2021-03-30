@@ -81,13 +81,9 @@ Listing of VHDL architecture from source file ```hex_7seg.vhd```:
 ```vhdl
 begin
 
-    --------------------------------------------------------------------
-    -- p_7seg_decoder:
-    -- A combinational process for 7-segment display decoder. 
-    -- Any time "hex_i" is changed, the process is "executed".
-    -- Output pin seg_o(6) corresponds to segment A, seg_o(5) to B, etc.
-    --------------------------------------------------------------------
-    p_7seg_decoder : process(hex_i)
+-- A combinational process for 7-segment display decoder. 
+-- Any time "hex_i" is changed, the process is "executed".
+p_7seg_decoder : process(hex_i)
     
     begin
     
@@ -132,48 +128,130 @@ begin
 Listing of VHDL stimulus process from testbench file ```tb_hex_7seg.vhd```:
 
 ```vhdl
-    p_stimulus : process
-    begin
-        -- Report a note at the begining of stimulus process
-        report "Stimulus process started" severity note;
-        
-        -- 1st test
-        s_hex <= "0000"; wait for 62.5 ns;
-        -- 2nd test
-        s_hex <= "0001"; wait for 62.5 ns;
-        -- 3rd test
-        s_hex <= "0010"; wait for 62.5 ns;
-        -- 4th test
-        s_hex <= "0011"; wait for 62.5 ns;
-        -- 5th test
-        s_hex <= "0100"; wait for 62.5 ns;
-        -- 6th test
-        s_hex <= "0101"; wait for 62.5 ns;
-        -- 7th test
-        s_hex <= "0110"; wait for 62.5 ns;
-        -- 8th test
-        s_hex <= "0111"; wait for 62.5 ns;
-        -- 9th test
-        s_hex <= "1000"; wait for 62.5 ns;
-        -- 10th test
-        s_hex <= "1001"; wait for 62.5 ns;
-        -- 11th test
-        s_hex <= "1010"; wait for 62.5 ns;
-        -- 12th test
-        s_hex <= "1011"; wait for 62.5 ns;
-        -- 13th test
-        s_hex <= "1100"; wait for 62.5 ns;
-        -- 14th test
-        s_hex <= "1101"; wait for 62.5 ns;
-        -- 15th test
-        s_hex <= "1110"; wait for 62.5 ns;
-        -- 16th test
-        s_hex <= "1111"; wait for 62.5 ns;
-            
-        -- Report a note at the end of stimulus process
-        report "Stimulus process finished" severity note;
-        wait;
-    end process p_stimulus;
+p_stimulus : process
+
+begin
+
+    -- Report a note at the begining of stimulus process
+    report "Stimulus process started" severity note;
+    
+    -- 1st test
+    s_SW <= "0000"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '0') and (s_CD = '0') and (s_CE = '0') and (s_CF = '0') and (s_CG = '1') and (s_LED = "00010000") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0000" severity error;
+    
+    -- 2nd test
+    s_SW <= "0001"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '1') and (s_CB = '0') and (s_CC = '0') and (s_CD = '1') and (s_CE = '1') and (s_CF = '1') and (s_CG = '1') and (s_LED = "10000001") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0001" severity error;
+    
+    -- 3rd test
+    s_SW <= "0010"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '1') and (s_CD = '0') and (s_CE = '0') and (s_CF = '1') and (s_CG = '0') and (s_LED = "10000010") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0010" severity error;
+    
+    -- 4th test
+    s_SW <= "0011"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '0') and (s_CD = '0') and (s_CE = '1') and (s_CF = '1') and (s_CG = '0') and (s_LED = "00000011") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0011" severity error;
+    
+    -- 5th test
+    s_SW <= "0100"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '1') and (s_CB = '0') and (s_CC = '0') and (s_CD = '1') and (s_CE = '1') and (s_CF = '0') and (s_CG = '0') and (s_LED = "10000100") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0100" severity error;
+    
+    -- 6th test
+    s_SW <= "0101"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '1') and (s_CC = '0') and (s_CD = '0') and (s_CE = '1') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00000101") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0101" severity error;
+    
+    -- 7th test
+    s_SW <= "0110"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '1') and (s_CC = '0') and (s_CD = '0') and (s_CE = '0') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00000110") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0110" severity error;
+    
+    -- 8th test
+    s_SW <= "0111"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '0') and (s_CD = '0') and (s_CE = '1') and (s_CF = '1') and (s_CG = '1') and (s_LED = "00000111") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=0111" severity error;
+    
+    -- 9th test
+    s_SW <= "1000"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '0') and (s_CD = '0') and (s_CE = '0') and (s_CF = '0') and (s_CG = '0') and (s_LED = "10001000") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1000" severity error;
+    
+    -- 10th test
+    s_SW <= "1001"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '0') and (s_CD = '0') and (s_CE = '1') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00001001") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1001" severity error;
+    
+    -- 11th test
+    s_SW <= "1010"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '0') and (s_CC = '0') and (s_CD = '1') and (s_CE = '0') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00101010") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1010" severity error;
+    
+    -- 12th test
+    s_SW <= "1011"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '1') and (s_CB = '1') and (s_CC = '0') and (s_CD = '0') and (s_CE = '0') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00101011") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1011" severity error;
+    
+    -- 13th test
+    s_SW <= "1100"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '1') and (s_CC = '1') and (s_CD = '0') and (s_CE = '0') and (s_CF = '0') and (s_CG = '1') and (s_LED = "00101100") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1100" severity error;
+    
+    -- 14th test
+    s_SW <= "1101"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '1') and (s_CB = '0') and (s_CC = '0') and (s_CD = '0') and (s_CE = '0') and (s_CF = '1') and (s_CG = '0') and (s_LED = "00101101") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1101" severity error;
+    
+    -- 15th test
+    s_SW <= "1110"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '1') and (s_CC = '1') and (s_CD = '0') and (s_CE = '0') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00101110") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1110" severity error;
+    
+    -- 16th test
+    s_SW <= "1111"; wait for 62.5 ns;
+    -- Expected output
+    assert ((s_CA = '0') and (s_CB = '1') and (s_CC = '1') and (s_CD = '1') and (s_CE = '0') and (s_CF = '0') and (s_CG = '0') and (s_LED = "00101111") and (s_AN = "11110111"))
+    -- If false, then report an error
+    report "Test failed for input combination: SW=1111" severity error;
+    
+    -- Report a note at the end of stimulus process
+    report "Stimulus process finished" severity note;
+    wait;
+    
+end process p_stimulus;
 ```
 
 Screenshot with simulated time waveforms:
@@ -183,10 +261,7 @@ Screenshot with simulated time waveforms:
 Listing of VHDL code from source file ```top.vhd``` with 7-segment module instantiation:
 
 ```vhdl
-    --------------------------------------------------------------------
-    -- Instance (copy) of hex_7seg entity
-    --------------------------------------------------------------------
-    hex2seg : entity work.hex_7seg
+hex2seg : entity work.hex_7seg
         port map(
             hex_i    => SW,
             
@@ -233,14 +308,8 @@ LED(4) <= '1' when SW = "0000" else '0';
 LED(5) <= '1' when SW > "1001" else '0';
 
 -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
-LED(6) <=   '1' when SW = "0001" else
-            '1' when SW = "0011" else 
-            '1' when SW = "0101" else 
-            '1' when SW = "0111" else 
-            '1' when SW = "1001" else 
-            '1' when SW = "1011" else 
-            '1' when SW = "1101" else  
-            '1' when SW = "1111" else 
+LED(6) <=   '1' when SW = "XX01" else
+            '1' when SW = "XX11" else 
             '0';
 
 -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
