@@ -8,7 +8,7 @@ This Finite State Machine (FSM) has four states: **A**, **B**, **C**, and **D**.
 
 Diagram for the FSM:
 
-<img src="Images/Simple_FSM.webp" alt="Finite State Machine diagram" style="width:400px">
+<img src="Images/Simple_FSM.png" alt="Finite State Machine diagram" style="width:400px">
 
 State table for the FSM:
 
