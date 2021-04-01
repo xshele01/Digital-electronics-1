@@ -10,6 +10,7 @@ Welcome to my DE-1 repository!
   5. [Binary counter](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/05-counter)
   6. [Driver for multiple seven-segment displays](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/06-display_driver)
   7. [Latches and Flip-flops](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/07-ffs)
+  8. [Traffic light controller](https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs/08-traffic_lights)
    
 ## Course links
 
@@ -26,3 +27,4 @@ Welcome to my DE-1 repository!
   * [VHDL Syntax Web-Course – Surf-VHDL](https://surf-vhdl.com/vhdl-syntax-web-course-surf-vhdl/)
   * [Learn about Electronics](https://learnabout-electronics.org/index.php)
   * [VLSI Design - VHDL](https://www.tutorialspoint.com/vlsi_design/vlsi_design_vhdl_introduction.htm)
+  * [Arduining - Physical Computing Mini-Projects](https://arduining.com/)
