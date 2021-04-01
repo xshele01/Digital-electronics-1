@@ -27,6 +27,10 @@ Connection table of two of the Nexys board RGB LEDs (from [Nexys reference manua
 
 ## 2. Traffic light controller
 
+State diagram:
+
+![State diagram of traffic light controller](Images/state-diagram-tlc.png)
+
 Listing of VHDL code of sequential process ```p_traffic_fsm```:
 
 ```vhdl
