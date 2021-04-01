@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_smart_tlc/p_stimulus  File: C:/Users/pavloshelemba/traffic/traffic.srcs/sim_1/new/tb_smart_tlc.vhd
+Note: Stimulus process finished
+Time: 10 us  Iteration: 0  Process: /tb_smart_tlc/p_stimulus  File: C:/Users/pavloshelemba/traffic/traffic.srcs/sim_1/new/tb_smart_tlc.vhd

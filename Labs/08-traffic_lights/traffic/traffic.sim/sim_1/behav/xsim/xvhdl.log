@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pavloshelemba/traffic/traffic.srcs/sources_1/new/smart_tlc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'smart_tlc'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/pavloshelemba/traffic/traffic.srcs/sim_1/new/tb_smart_tlc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_smart_tlc'
