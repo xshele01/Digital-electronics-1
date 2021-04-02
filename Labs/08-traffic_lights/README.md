@@ -8,7 +8,7 @@ This Finite State Machine (FSM) has four states: **A**, **B**, **C**, and **D**.
 
 Diagram for the FSM:
 
-<img src="Images/Simple_FSM.png" alt="Finite State Machine diagram" style="width:400px">
+<img src="Images/Simple_FSM.png" alt="Finite State Machine diagram">
 
 State table for the FSM:
 
@@ -162,7 +162,7 @@ Screenshot of the simulation (10 μs):
 
 ![Screenshot of the whole traffic light simulation](Images/traffic-waves.png)
 
-Screenshot of the simulation (2 periods) with highlighted colors:
+Screenshot of the simulation (1 full cycle) with highlighted colors:
 
 ![Screenshot of the traffic light simulation with highlighted colors](Images/traffic-waves-colored.png)
 
@@ -170,7 +170,7 @@ Screenshot of the simulation (2 periods) with highlighted colors:
 
 According to [Traffic Light, Finite State Machine with Arduino](https://arduining.com/2015/09/18/traffic-light-states-machine-with-arduino/), inputs and outputs are:
 
-<img src="Images/traffic_input_output7.jpg" alt="Inputs and outputs of smart traffic light controller" style="width:700px">
+<img src="Images/traffic_input_output7.jpg" alt="Inputs and outputs of smart traffic light controller">
 
 State table:
 
