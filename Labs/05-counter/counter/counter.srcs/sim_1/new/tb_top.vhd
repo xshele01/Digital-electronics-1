@@ -46,7 +46,7 @@ begin
     -- Connecting testbench signals with hex_7seg entity (Unit Under Test)
     uut_top : entity work.top
         generic map(
-
+            
         )
         port map(
             SW   => s_SW,

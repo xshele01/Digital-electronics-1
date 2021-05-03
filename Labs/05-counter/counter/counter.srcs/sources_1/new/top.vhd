@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 --
--- Top layer for N-bit Up/Down binary counter.
+-- Top level for N-bit Up/Down binary counter.
 -- Nexys A7-50T, Vivado v2020.2
 --
 -- Copyright (c) 2021-Present Pavlo Shelemba
@@ -12,19 +12,21 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity top is
-    Port ( CLK100MHZ : in STD_LOGIC;
-           BTNC : in STD_LOGIC;
-           SW : in STD_LOGIC_VECTOR (1 - 1 downto 0);
-           LED : out STD_LOGIC_VECTOR (16 - 1 downto 0);
-           CA : out STD_LOGIC;
-           CB : out STD_LOGIC;
-           CC : out STD_LOGIC;
-           CD : out STD_LOGIC;
-           CE : out STD_LOGIC;
-           CF : out STD_LOGIC;
-           CG : out STD_LOGIC;
-           AN : out STD_LOGIC_VECTOR (8 - 1 downto 0)
-           );
+    Port ( 
+        CLK100MHZ : in  STD_LOGIC;
+        BTNC      : in  STD_LOGIC;
+        SW        : in  STD_LOGIC_VECTOR (1 - 1 downto 0);
+
+        LED       : out STD_LOGIC_VECTOR (16 - 1 downto 0);
+        CA        : out STD_LOGIC;
+        CB        : out STD_LOGIC;
+        CC        : out STD_LOGIC;
+        CD        : out STD_LOGIC;
+        CE        : out STD_LOGIC;
+        CF        : out STD_LOGIC;
+        CG        : out STD_LOGIC;
+        AN        : out STD_LOGIC_VECTOR (8 - 1 downto 0)
+        );
 end top;
 
 ------------------------------------------------------------------------

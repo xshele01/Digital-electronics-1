@@ -24,7 +24,7 @@ Welcome to my DE-1 repository!
   * [FPGARelated VHDL tutorial](https://www.fpgarelated.com/showarticle/208/vhdl-tutorial.php)
   * [Last Minute Engineers](https://lastminuteengineers.com/)
   * [FPGA designs with VHDL](https://vhdlguide.readthedocs.io/en/latest/index.html)
-  * [VHDL Syntax Web-Course – Surf-VHDL](https://surf-vhdl.com/vhdl-syntax-web-course-surf-vhdl/)
+  * [Surf-VHDL](https://surf-vhdl.com/)
   * [Learn about Electronics](https://learnabout-electronics.org/index.php)
   * [VLSI Design - VHDL](https://www.tutorialspoint.com/vlsi_design/vlsi_design_vhdl_introduction.htm)
   * [Arduining - Physical Computing Mini-Projects](https://arduining.com/)

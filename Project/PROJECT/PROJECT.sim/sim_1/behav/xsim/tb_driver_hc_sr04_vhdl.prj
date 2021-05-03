@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Users/pavloshelemba/counter/counter.srcs/sources_1/new/cnt_up_down.vhd" \
+"../../../../PROJECT.srcs/sources_1/new/trigger.vhd" \
+"../../../../PROJECT.srcs/sources_1/new/driver_hc_sr04.vhd" \
+"../../../../PROJECT.srcs/sim_1/new/tb_driver_hc_sr04.vhd" \
+
+# Do not sort compile order
+nosort

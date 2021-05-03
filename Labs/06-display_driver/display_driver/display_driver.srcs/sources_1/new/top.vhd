@@ -17,6 +17,7 @@ entity top is
            CLK100MHZ    : in STD_LOGIC;
            BTNC         : in STD_LOGIC;
            SW           : in STD_LOGIC_VECTOR (16 - 1 downto 0);
+           
            CA           : out STD_LOGIC;
            CB           : out STD_LOGIC;
            CC           : out STD_LOGIC;

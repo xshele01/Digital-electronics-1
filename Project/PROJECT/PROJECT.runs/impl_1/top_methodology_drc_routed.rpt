@@ -1,0 +1,137 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon May  3 21:40:20 2021
+| Host         : PAVLOSHELEMDBA2 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 20
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 2          |
+| TIMING-18 | Warning  | Missing input or output delay | 3          |
+| TIMING-20 | Warning  | Non-clocked latch             | 15         |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell driver/s_duty_reg[21]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) pwm/s_duty_reg[21]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell driver/s_duty_reg[21]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) pwm/s_duty_reg[0]/CLR, pwm/s_duty_reg[21]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on pwm_o relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on trig_o[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on trig_o[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[0] cannot be properly analyzed as its control pin driver/cm_o_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[1] cannot be properly analyzed as its control pin driver/cm_o_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[2] cannot be properly analyzed as its control pin driver/cm_o_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[3] cannot be properly analyzed as its control pin driver/cm_o_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[4] cannot be properly analyzed as its control pin driver/cm_o_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[5] cannot be properly analyzed as its control pin driver/cm_o_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[6] cannot be properly analyzed as its control pin driver/cm_o_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch driver/cm_o_reg[7] cannot be properly analyzed as its control pin driver/cm_o_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch pwm/s_duty_reg[0] cannot be properly analyzed as its control pin pwm/s_duty_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch pwm/s_duty_reg[21]/L7 (in pwm/s_duty_reg[21] macro) cannot be properly analyzed as its control pin pwm/s_duty_reg[21]/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch pwm/s_length_reg[0] cannot be properly analyzed as its control pin pwm/s_length_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch pwm/s_length_reg[19] cannot be properly analyzed as its control pin pwm/s_length_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch pwm/s_length_reg[22] cannot be properly analyzed as its control pin pwm/s_length_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch pwm/s_length_reg[23] cannot be properly analyzed as its control pin pwm/s_length_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch switch/echo_o_reg cannot be properly analyzed as its control pin switch/echo_o_reg/G is not reached by a timing clock
+Related violations: <none>
+
+

@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_driver_hc_sr04_behav/xsimk.exe -simmode gui -wdb tb_driver_hc_sr04_behav.wdb -simrunnum 0 -socket 50234
+Design successfully loaded
+Design Loading Memory Usage: 5260 KB (Peak: 5260 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 13948 KB (Peak: 13948 KB)
+Simulation CPU Usage: 30530 ms
