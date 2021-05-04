@@ -5,7 +5,7 @@
 --
 -- Copyright (c) 2021 - Present Shelemba Pavlo
 -- Brno University of Technology, Czech Republic
--- This work is licensed under the terms of the MIT license.
+-- This work is licensed under the terms of the MIT license
 --
 ----------------------------------------------------------------------------------
 
