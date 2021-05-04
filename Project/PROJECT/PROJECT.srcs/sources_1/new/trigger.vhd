@@ -24,7 +24,7 @@ entity trigger is
     port(
         clk      : in  std_logic;      -- Main clock
         reset    : in  std_logic;      -- Synchronous reset
-        trig_o   : out std_logic       -- trigger pulse signal
+        trig_o   : out std_logic       -- Trigger pulse signal
     );
 end entity trigger;
 

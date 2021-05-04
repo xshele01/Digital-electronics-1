@@ -26,7 +26,7 @@ architecture behavioral of driver_hc_sr04 is
 
     -- Internal trigger
     signal s_trig      : std_logic;
-    -- Internal 21-bit counter
+    -- Internal counter to store echo signal length
     signal pulse_width : std_logic_vector(21-1 downto 0); 
     
 begin

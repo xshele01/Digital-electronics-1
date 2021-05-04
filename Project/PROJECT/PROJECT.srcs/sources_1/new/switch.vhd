@@ -14,11 +14,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity switch is
   Port ( 
-        sw_i    : in  STD_LOGIC_VECTOR (2-1 downto 0); -- on-board switches
-        echo_i  : in  STD_LOGIC_VECTOR (2-1 downto 0); -- echo signal from one of sensors
-        trig_i  : in  STD_LOGIC;                       -- trigger from driver
-        echo_o  : out STD_LOGIC;                       -- echo to driver
-        trig_o  : out STD_LOGIC_VECTOR (2-1 downto 0)  -- trigger signal to one of sensors
+        sw_i    : in  STD_LOGIC_VECTOR (2-1 downto 0); -- On-board switches
+        echo_i  : in  STD_LOGIC_VECTOR (2-1 downto 0); -- Echo signal from sensors
+        trig_i  : in  STD_LOGIC;                       -- Trigger signal from driver
+        echo_o  : out STD_LOGIC;                       -- Echo signal to driver
+        trig_o  : out STD_LOGIC_VECTOR (2-1 downto 0)  -- Trigger signal to sensors
         );
 end switch;
 

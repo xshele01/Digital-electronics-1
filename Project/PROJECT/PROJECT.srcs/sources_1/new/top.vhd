@@ -14,13 +14,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity top is
     Port ( 
-        CLK100MHZ   : in  STD_LOGIC;                       -- Main clock
+        CLK100MHZ   : in  STD_LOGIC;                       -- main clock
         sw_i        : in  STD_LOGIC_VECTOR (2-1 downto 0); -- switches to operate system
         echo_i      : in  STD_LOGIC_VECTOR (2-1 downto 0); -- PMOD connectors
         --
-        cm_o        : out std_logic_vector(8-1 downto 0);  -- Distanse output (for testbench)
+        cm_o        : out std_logic_vector(8-1 downto 0);  -- distanсe output (for testbench)
         --
-        trig_o      : out STD_LOGIC_VECTOR (2-1 downto 0); -- Triger signals to sensors
+        trig_o      : out STD_LOGIC_VECTOR (2-1 downto 0); -- triger signals to sensors
         pwm_o       : out STD_LOGIC;
         led         : out STD_LOGIC_VECTOR (4-1 downto 0); -- LEDs for bargrapgh
         -- RGB LEDs

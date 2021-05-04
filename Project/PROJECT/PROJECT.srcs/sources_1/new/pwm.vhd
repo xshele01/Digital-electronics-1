@@ -35,7 +35,7 @@ architecture behavioral of pwm is
 begin
     --------------------------------------------------------------------
     -- p_pwm:
-    -- Changes rate of the sound signaling by setting period and duty cycle
+    -- Changes rate of the sound signaling by changing period and duty cycle
     -- of the enable signal depending on the claculated distance. 
     --------------------------------------------------------------------
      p_pwm : process(cm_i)
@@ -56,8 +56,8 @@ begin
      end process p_pwm;
     --------------------------------------------------------------------
     -- p_vaweform:
-    -- Generates pwm signal with fixed duty cycle (volume) and rate
-    -- (pitch). Resulting pulse produces square wave at A3 note (440 Hz).
+    -- Generates pwm signal with fixed duty cycle  of 50% (max volume) and
+    -- rate (pitch). Resulting pulse produces square wave at A3 note (440 Hz).
     --------------------------------------------------------------------
     p_vaweform : process(clk, s_en)
     	variable cnt : natural := 0;
@@ -82,7 +82,7 @@ begin
     --------------------------------------------------------------------
     -- p_enable:
     -- Determines the pulsing rate at which generated square wave is played.
-    -- From continuos to once a second.
+    -- From continuous to once a second.
     -- Based on a period and duty cycle from p_pwm process.
     --------------------------------------------------------------------
     p_enable : process(clk)
