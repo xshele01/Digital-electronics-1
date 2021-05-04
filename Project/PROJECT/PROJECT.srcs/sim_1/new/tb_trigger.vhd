@@ -35,9 +35,10 @@ architecture testbench of tb_trigger is
     signal s_trig_o              : std_logic;
 
 begin
+    ------------------------------------------------------------------------
     -- Connecting testbench signals with trigger entity
-    -- (Unit Under Test)
-    uut_ce : entity work.trigger
+    ------------------------------------------------------------------------
+    uut_trig : entity work.trigger
         generic map(
             g_MAX    => c_MAX,
             g_LENGTH => c_LENGTH
@@ -47,7 +48,6 @@ begin
             reset    => s_reset,
             trig_o   => s_trig_o
         );
-
     --------------------------------------------------------------------
     -- Clock generation process
     --------------------------------------------------------------------
@@ -61,7 +61,6 @@ begin
         end loop;
         wait;                           -- Process is suspended forever
     end process p_clk_gen;
-
     --------------------------------------------------------------------
     -- Reset generation process
     --------------------------------------------------------------------
@@ -83,7 +82,6 @@ begin
 
         wait;
     end process p_reset_gen;
-
     --------------------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------------------

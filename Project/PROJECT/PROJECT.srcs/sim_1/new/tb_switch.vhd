@@ -33,9 +33,9 @@ architecture testbench of tb_switch is
 
 begin
     --------------------------------------------------------------------
-    -- Connecting testbench signals with trigger entity
+    -- Connecting testbench signals with switch entity
     --------------------------------------------------------------------
-    uut_ce : entity work.switch
+    uut_sw : entity work.switch
         port map(
             sw_i   => s_sw_i,
             echo_i   => s_echo_i,
@@ -43,7 +43,6 @@ begin
             echo_o   => s_echo_o,
             trig_o   => s_trig_o
         );
-
     --------------------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------------------

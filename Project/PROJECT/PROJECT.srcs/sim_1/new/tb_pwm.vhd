@@ -24,13 +24,18 @@ architecture testbench of tb_pwm is
     signal s_pwm_o       : std_logic;
 
 begin
-    uut_divider : entity work.pwm
+    ------------------------------------------------------------------------
+    -- Connecting testbench signals with trigger entity
+    ------------------------------------------------------------------------
+    uut_pwm : entity work.pwm
         port map(
             clk 	=> s_clk_100MHz,
  			cm_i    => s_cm_i,
             pwm_o   => s_pwm_o
         );
-        
+    --------------------------------------------------------------------
+    -- Clock generation process
+    --------------------------------------------------------------------    
     p_clk_gen : process
     begin
         while now < 250000 ns loop
@@ -41,7 +46,9 @@ begin
         end loop;
         wait;
     end process p_clk_gen;
-        
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
     p_stimulus : process
     begin
         report "Stimulus process started" severity note;
